@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>PayPal Salesforce escalation email generator</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <img
+        alt="paypal-logo"
+        src="https://upload.wikimedia.org/wikipedia/donate/0/02/Paypal-logo-white.svg"
+      />
+      <h1>Salesforce escalation template</h1>
+    </div>
+    <div class="default-container">
+      <div class="input-list">
+        <h2 class="model-type">Default email</h2>
+        <p class="input-title">Engineer's name</p>
+        <input id="eng-name" type="text" />
+        <p class="input-title">Alert ID</p>
+        <input id="alert-id" type="text" />
+        <p class="input-title">Merchant's name</p>
+        <input id="mer-name" type="text" />
+        <p class="input-title">Merchant's ID</p>
+        <input id="mer-id" type="text" />
+        <p class="input-title">CSM's name</p>
+        <input id="csm-name" type="text" />
+        <p class="input-title">Issue description</p>
+        <input id="issue-desc" type="text" />
+        <p class="input-title">Impact</p>
+        <input id="impact" type="text" />
+        <p class="input-title">How to resolve it</p>
+        <input id="how-resolve" type="text" />
+      </div>
+      <div class="default-result">
+        <span><i>Email subject</i></span>
+        <h4>
+          MTS Monitoring for alert ID <span id="span-id"></span> for Merchant
+          <span id="span-mer"></span>
+        </h4>
+        <span><i>Email content</i></span>
+        <p>Dear <span id="span-csm-name"></span>, I hope you're doing well.</p>
+        <p>
+          This is <span id="span-eng-name"></span> from MTS Global Monitoring
+          Team. It has come to our attention that one of your merchants have
+          being processing with an unexpected behavior, please review the
+          information below.
+        </p>
+        <p><strong>Merchant Name:</strong> <span id="span-mer-name"></span></p>
+        <p>
+          <strong>Merchant Account Number:</strong>
+          <span id="span-mer-id"></span>
+        </p>
+        <p>Please see the details below:</p>
+        <p>
+          <strong>Issue description:</strong> <span id="span-issue-desc"></span>
+        </p>
+        <p><strong>Impact:</strong> <span id="span-impact"></span></p>
+        <p>
+          <strong>How to resolve it:</strong>
+          <span id="span-how-resolve"></span>
+        </p>
+        <p>
+          We recommend you get in touch with the merchant to resolve the
+          behavior. Please let us know if you have further questions about it.
+        </p>
+      </div>
+    </div>
+    <div class="expiration-container"></div>
+  </body>
+</html>
